@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Analysis SQL Project</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #38bdf8;
+        }
+
+        h2 {
+            margin-top: 40px;
+            color: #22d3ee;
+        }
+
+        h3 {
+            margin-top: 30px;
+            color: #7dd3fc;
+        }
+
+        p, li {
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .code-box {
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        pre {
+            margin: 0;
+            color: #38bdf8;
+            font-size: 14px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #0ea5e9;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .github {
+            background-color: #24292e;
+            color: white;
+        }
+
+        .linkedin {
+            background-color: #0077b5;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Sales Analysis SQL Project</h1>
+    <div class="badge">Level: Beginner</div>
+
+    <div class="social-links">
+        <a href="https://github.com/smirjosif" target="_blank" class="btn github">
+            <i class="fa-brands fa-github"></i> GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/smir-yousif-a71a52355" target="_blank" class="btn linkedin">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+    </div>
+
+    <h2>Project Overview</h2>
+    <p>
+        This project demonstrates SQL techniques used by data analysts to explore,
+        clean, and analyze sales data. It includes database setup, data cleaning,
+        exploratory data analysis (EDA), and solving business problems using SQL queries.
+    </p>
+
+    <h2>Database Setup</h2>
+
+    <div class="code-box">
+<pre>
+CREATE DATABASE sales_project_db;
+
+CREATE TABLE sales_project (
+    transaction_id INT PRIMARY KEY,
+    sale_date DATE,
+    sale_time TIME,
+    customer_id INT,
+    gender VARCHAR(10),
+    age INT,
+    category VARCHAR(35),
+    quantity INT,
+    price_per_unit FLOAT,
+    cogs FLOAT,
+    total_sale FLOAT
+);
+</pre>
+    </div>
+
+    <h2>Key Business Queries</h2>
+
+    <h3>1. Total Sales Per Category</h3>
+    <div class="code-box">
+<pre>
+SELECT 
+    category,
+    SUM(total_sale) AS net_sale,
+    COUNT(*) AS total_orders
+FROM sales_project
+GROUP BY category;
+</pre>
+    </div>
+
+    <h3>2. Top 5 Customers by Total Sales</h3>
+    <div class="code-box">
+<pre>
+SELECT 
+    customer_id,
+    SUM(total_sale) AS total_sales
+FROM sales_project
+GROUP BY customer_id
+ORDER BY total_sales DESC
+LIMIT 5;
+</pre>
+    </div>
+
+    <h3>3. Best Selling Month Per Year</h3>
+    <div class="code-box">
+<pre>
+SELECT *
+FROM (
+    SELECT 
+        EXTRACT(YEAR FROM sale_date) AS year,
+        EXTRACT(MONTH FROM sale_date) AS month,
+        AVG(total_sale) AS avg_sale,
+        RANK() OVER(
+            PARTITION BY EXTRACT(YEAR FROM sale_date)
+            ORDER BY AVG(total_sale) DESC
+        ) AS rank
+    FROM sales_project
+    GROUP BY 1, 2
+) t
+WHERE rank = 1;
+</pre>
+    </div>
+
+    <h2>Findings</h2>
+    <ul>
+        <li>Identified top-performing product categories.</li>
+        <li>Detected high-value transactions above 1000.</li>
+        <li>Analyzed seasonal sales trends.</li>
+        <li>Discovered top-spending customers.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>
+        This project showcases practical SQL skills including data cleaning,
+        aggregation, ranking, and business-driven analysis. It reflects the
+        analytical thinking required for real-world data analyst roles.
+    </p>
+
+</div>
+<a href="index.html" class="btn">Back to Portfolio</a>
+
+</body>
+</html>

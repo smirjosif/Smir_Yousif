@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Mentor User Performance Analysis</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome MUST be inside head -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #38bdf8;
+        }
+
+        h2 {
+            margin-top: 40px;
+            color: #22d3ee;
+        }
+
+        h3 {
+            margin-top: 30px;
+            color: #7dd3fc;
+        }
+
+        p, li {
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .code-box {
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        pre {
+            margin: 0;
+            color: #38bdf8;
+            font-size: 14px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #0ea5e9;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        /* ===== SOCIAL BUTTON STYLE ===== */
+
+        .social-links {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 8px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .github {
+            background-color: #24292e;
+            color: white;
+        }
+
+        .linkedin {
+            background-color: #0077b5;
+            color: white;
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+  
+    <!-- Your content stays same -->
+
+   
+<center><h1>SQL Mentor User Performance Analysis</h1></center>
+    <!-- ===== PROFESSIONAL BUTTONS ===== -->
+
+    <div class="social-links">
+        <a href="https://github.com/smirjosif" target="_blank" class="btn github">
+            <i class="fa-brands fa-github"></i> GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/smir-yousif-a71a52355" target="_blank" class="btn linkedin">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+    </div>
+
+</div>
+
+
+<div class="badge">Project Level: Intermediate</div>
+
+<div class="section">
+    <h2>Project Overview</h2>
+    <p>
+        This project is designed to help beginners understand SQL querying and performance analysis 
+        using real-time data from SQL Mentor datasets. In this project, you will analyze user 
+        performance by creating and querying a table of user submissions. 
+        The goal is to solve a series of SQL problems to extract meaningful insights from user data.
+    </p>
+</div>
+ <div class="section">
+        <h2>Conclusion</h2>
+        <p>
+            This project demonstrates practical SQL skills for data analysis,
+            ranking, and performance evaluation using real-world data scenarios.
+        </p>
+    </div>
+<div class="section">
+    <h2>Objectives</h2>
+    <ul>
+        <li>Learn how to use SQL for aggregation, filtering, and ranking.</li>
+        <li>Understand how to calculate and manipulate real-world datasets.</li>
+        <li>Gain hands-on experience with COUNT, SUM, AVG, EXTRACT(), and DENSE_RANK().</li>
+        <li>Develop performance analysis skills using SQL queries.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>SQL Mentor User Performance Dataset</h2>
+    <p>The dataset includes:</p>
+    <ul>
+        <li><strong>User ID</strong></li>
+        <li><strong>Question ID</strong></li>
+        <li><strong>Points Earned</strong></li>
+        <li><strong>Submission Timestamp</strong></li>
+        <li><strong>Username</strong></li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>SQL Problems and Questions</h2>
+
+    <h3>Q1. List All Distinct Users and Their Stats</h3>
+    <p>Return the user name, total submissions, and total points earned by each user.</p>
+
+    <h3>Q2. Calculate the Daily Average Points</h3>
+    <p>For each day, calculate the average points earned by each user.</p>
+
+    <h3>Q3. Top 3 Users with Most Correct Submissions Per Day</h3>
+    <p>Identify the top 3 users with the most correct submissions for each day.</p>
+
+    <h3>Q4. Top 5 Users with Highest Incorrect Submissions</h3>
+    <p>Identify the top 5 users with the highest number of incorrect submissions.</p>
+
+    <h3>Q5. Top 10 Weekly Performers</h3>
+    <p>Identify the top 10 users with the highest total points earned each week.</p>
+</div>
+
+<div class="section">
+    <h2>Key SQL Concepts Covered</h2>
+    <ul>
+        <li><strong>Aggregation:</strong> COUNT, SUM, AVG</li>
+        <li><strong>Date Functions:</strong> EXTRACT(), TO_CHAR()</li>
+        <li><strong>Conditional Aggregation:</strong> CASE WHEN</li>
+        <li><strong>Ranking:</strong> DENSE_RANK()</li>
+        <li><strong>Group By:</strong> Grouping data by user, day, or week</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>SQL Queries Solutions</h2>
+
+    <h3>Q1 Solution</h3>
+    <div class="code-box">
+<pre>
+SELECT 
+    username,
+    COUNT(id) AS total_submissions,
+    SUM(points) AS points_earned
+FROM user_submissions
+GROUP BY username
+ORDER BY total_submissions DESC;
+</pre>
+    </div>
+
+    <h3>Q2 Solution</h3>
+    <div class="code-box">
+<pre>
+SELECT 
+    TO_CHAR(submitted_at, 'DD-MM') AS day,
+    username,
+    AVG(points) AS daily_avg_points
+FROM user_submissions
+GROUP BY 1, 2
+ORDER BY username;
+</pre>
+    </div>
+
+    <h3>Q3 Solution</h3>
+    <div class="code-box">
+<pre>
+WITH daily_submissions AS (
+    SELECT 
+        TO_CHAR(submitted_at, 'DD-MM') AS daily,
+        username,
+        SUM(CASE WHEN points > 0 THEN 1 ELSE 0 END) AS correct_submissions
+    FROM user_submissions
+    GROUP BY 1, 2
+),
+users_rank AS (
+    SELECT 
+        daily,
+        username,
+        correct_submissions,
+        DENSE_RANK() OVER(PARTITION BY daily ORDER BY correct_submissions DESC) AS rank
+    FROM daily_submissions
+)
+SELECT daily, username, correct_submissions
+FROM users_rank
+WHERE rank <= 3;
+</pre>
+    </div>
+
+</div>
+
+<h3>Q4: Find the Top 5 Users with the Highest Number of Incorrect Submissions</h3>
+<div class="code-box">
+<pre>
+SELECT 
+    username,
+    SUM(CASE WHEN points < 0 THEN 1 ELSE 0 END) AS incorrect_submissions,
+    SUM(CASE WHEN points > 0 THEN 1 ELSE 0 END) AS correct_submissions,
+    SUM(CASE WHEN points < 0 THEN points ELSE 0 END) AS incorrect_submissions_points,
+    SUM(CASE WHEN points > 0 THEN points ELSE 0 END) AS correct_submissions_points_earned,
+    SUM(points) AS points_earned
+FROM user_submissions
+GROUP BY 1
+ORDER BY incorrect_submissions DESC;
+</pre>
+</div>
+
+<h3>Q5: Find the Top 10 Performers for Each Week</h3>
+<div class="code-box">
+<pre>
+SELECT *  
+FROM (
+    SELECT 
+        EXTRACT(WEEK FROM submitted_at) AS week_no,
+        username,
+        SUM(points) AS total_points_earned,
+        DENSE_RANK() OVER(
+            PARTITION BY EXTRACT(WEEK FROM submitted_at)
+            ORDER BY SUM(points) DESC
+        ) AS rank
+    FROM user_submissions
+    GROUP BY 1, 2
+    ORDER BY week_no, total_points_earned DESC
+)
+WHERE rank <= 10;
+</pre>
+</div>
+
+<div class="section">
+    <h2>Conclusion</h2>
+    <p>
+        This project provides an excellent opportunity for beginners to apply SQL knowledge 
+        to real-world data analysis problems. It strengthens aggregation, ranking, 
+        and date-based analysis skills using structured datasets.
+    </p>
+</div>
+
+</body>
+</html>

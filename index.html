@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smir Yousif | Data Analyst</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                entry.target.classList.add("active");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    reveals.forEach(el => observer.observe(el));
+
+});
+</script>
+<header>
+    <nav class="navbar">
+     <div class="logo">
+    <img src="C:\Users\Smir\Desktop\Portfolio\images\Profile.jpg.jpeg" alt="Smir Photo" class="logo-img">
+    <span class="logo-text">SMIR</span>
+</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+    <div class="hero-content">
+    <div class="hero-text">
+
+        <h1 class="hero-name">Smir Yousif Eisa</h1>
+
+        <h2 class="typing-text">
+        Junior Data Analyst | Power BI & SQL Specialist <br>
+         (SQL Server, PostgreSQL) Delivering Data-Driven <br>
+         Revenue Insights for Hospitality, Finance & Sales <br>
+          Growth .
+        </h2>
+
+<h2 class="hero-tagline">
+
+
+<br>
+
+
+</h2>
+
+        <p class="hero-description">
+            Turning structured and unstructured data into actionable business <br> 
+            intelligence using advanced SQL (SQL Server,PostgreSQL,Oracle PL/SQL)<br>
+            Power BI dashboards,Python analytics.Experienced in data cleaning<br>
+            transformation, KPI development,and building scalable reporting  <br>
+            solutions that drive measurable business performance improvements.
+        </p>
+
+        <div class="hero-btn">
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+
+    </div>
+</div>
+        <div class="hero-image">
+            <img src="C:\Users\Smir\Desktop\Portfolio\images\homPht.jpeg" alt="Profile Photo">
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section reveal">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-wrapper">
+
+        <div class="about-card">
+            <p>
+                I am a passionate and detail-oriented Data Analyst with strong hands-on experience in transforming raw data into meaningful business insights. I specialize in data cleaning, preprocessing, and visualization using tools such as Power BI, SQL Server, Excel, and Python (Pandas & NumPy).
+            </p>
+
+            <p>
+                During my internship at INFIDATA, I worked with real-world datasets, developed interactive dashboards, optimized SQL queries, and supported business decision-making through analytical reporting. I gained practical experience in KPI tracking, performance analysis, and data modeling using structured approaches like Star Schema.
+            </p>
+
+            <p>
+                I am highly analytical, solution-focused, and committed to continuous learning in data analytics, business intelligence, and database management. My goal is to leverage data-driven strategies to improve efficiency, performance, and organizational growth.
+            </p>
+        </div>
+
+        <div class="education-card">
+            <h3>Education 🎓</h3>
+            <ul>
+                <li>Bachelor in Information Technology – Sudan</li>
+                <li>Master in Computer Applications (MCA) – India</li>
+            </ul>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+
+
+<!-- Professional Experience -->
+<div class="accordion-item">
+    <a href="experience.html" target="_blank" class="accordion-header-link">
+        <h3>Professional Experience</h3>
+        <span class="accordion-icon">→</span>
+    </a>
+</div>
+
+<!-- Certifications -->
+<div class="accordion-item">
+    <a href="certifications.html" target="_blank" class="accordion-header-link">
+        <h3>Certifications</h3>
+        <span class="accordion-icon">→</span>
+    </a>
+</div>
+
+
+
+
+
+
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="section">
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="skills-grid">
+
+        <!-- SQL -->
+        <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/microsoft-sql-server.png"/>
+            <h3>SQL (SQL Server)</h3>
+            <p>
+                Advanced querying, joins, optimization and performance tuning.
+                Built analytical queries for KPI tracking and reporting.
+            </p>
+            <div class="progress"><span style="--width:90%"></span></div>
+        </div>
+
+        <!-- Python -->
+        <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/python.png"/>
+            <h3>Python (Pandas, NumPy)</h3>
+            <p>
+                Data cleaning and transformation using Pandas.
+                EDA and statistical insights extraction.
+            </p>
+            <div class="progress"><span style="--width:85%"></span></div>
+        </div>
+
+        <!-- Excel -->
+        <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/microsoft-excel-2019.png"/>
+            <h3>Excel</h3>
+            <p>
+                Advanced formulas, Pivot Tables and dashboards.
+                Business reporting and automation.
+            </p>
+            <div class="progress"><span style="--width:88%"></span></div>
+        </div>
+
+        <!-- pgAdmin -->
+        <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/postgreesql.png"/>
+            <h3>pgAdmin 4 (PostgreSQL)</h3>
+            <p>
+                Database management and performance tuning.
+                Structured schema design and data extraction.
+            </p>
+            <div class="progress"><span style="--width:80%"></span></div>
+        </div>
+
+        <!-- Power BI -->
+        <div class="skill-card">
+            <img src="https://img.icons8.com/color/96/power-bi.png"/>
+            <h3>Power BI</h3>
+            <p>
+                Interactive dashboards with DAX & Power Query.
+                KPI tracking and star schema modeling.
+            </p>
+            <div class="progress"><span style="--width:92%"></span></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <h2 class="section-title">Projects & Technologies</h2>
+
+    <div class="projects-grid">
+
+        <a href="atliq.html" class="project-card">
+            <i class="fa-solid fa-hotel"></i>
+            <h3>AtliQ Hospitality Revenue Analysis</h3>
+        </a>
+
+        <a href="blinkit.html" class="project-card">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h3>Blinkit Sales Dashboard</h3>
+        </a>
+
+        <a href="bankloan.html" class="project-card">
+            <i class="fa-solid fa-building-columns"></i>
+            <h3>Bank Loan Dashboard</h3>
+        </a>
+
+
+
+
+
+<a href="sales.html" class="project-card">
+    <i class="fa-solid fa-server"></i>
+    <h3>Sales Dashboard (pgAdmin 4)</h3>
+</a>
+      
+
+<a href="mentor.html" class="project-card">
+    <i class="fa-solid fa-database"></i>
+    <h3>Mentor SQL Project</h3>
+</a>
+
+
+
+
+    </div>
+    <!-- CONTACT -->
+  <section id="contact" class="section">
+     <h2 class="section-title">Contact Me</h2> 
+     <div class="contact-wrapper reveal"> 
+        <div class="contact-container"> 
+            <a href="mailto:Smiryousif33@gmail.com" class="contact-icon"> 
+                <i class="fa-solid fa-envelope"></i> <span>Email</span> </a> 
+                <a href="https://www.linkedin.com/in/smir-yousif-a71a52355/" target="_blank" class="contact-icon">
+                     <i class="fa-brands fa-linkedin"></i> <span>LinkedIn</span> </a> <a href="https://github.com/smirjosif" target="_blank" class="contact-icon"> 
+                        <i class="fa-brands fa-github"></i> <span>GitHub</span> </a> <a href="https://www.facebook.com/sameeretoo.etoo/" target="_blank" class="contact-icon">
+                             <i class="fa-brands fa-facebook"></i> <span>Facebook</span> </a> <a href="https://maps.app.goo.gl/pPRfM6D2fFJRzZh28?g_st=com.google.maps.preview.copy" target="_blank" class="contact-icon">
+                                 <i class="fa-solid fa-location-dot"></i>
+                                  <span>Location</span>
+                                 </a> <script src="script.js"></script>
+                                 </div> </div> </section> </section>
+
+</section>
+
+
+    </div>
+</section>
+
+
+<footer class="bottom-bar">
+    <div class="bottom-bar-inner">
+        <img src="C:\Users\Smir\Desktop\Portfolio\images\Profile.jpg.jpeg" 
+             alt="Smir Yousif - Smiling" 
+             class="bottom-profile-img">
+        <span> Smir Yousif | Telangana, India | +91 9380718624 |© 2026|</span>
+    </div>
+</footer>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
